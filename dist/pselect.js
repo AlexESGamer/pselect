@@ -102,7 +102,7 @@ Pselect.prototype.create = function (provincesElement, municipesElement) {
 
   for (var i = 0; i < provincesData.length; i++) {
     var province = provincesData[i];
-    _addOption(provincesElement, province.nm, province.id);
+    _addOption(provincesElement, province.nm, province.nm);
   }
 
   // Callback when the selected province is changed
@@ -118,7 +118,7 @@ Pselect.prototype.__onProvinceSelected = function (event) {
   for (var i = 0; i < municipesData.length; i++) {
     var municipe = municipesData[i];
     if (municipe.id.indexOf(province) === 0) {
-      _addOption(this._munElement, municipe.nm, municipe.id);
+      _addOption(this._munElement, municipe.nm, municipe.nm);
     }
   }
 };
